@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: white;
+}
+
+.header {
+    background-color: #141414;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 40px;
+}
+
+.header-lang {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.header-signin .sign-in-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.home {
+    text-align: center;
+    padding: 50px;
+    background-color: #f3f3f3;
+    color: #141414;
+}
+
+.home-input-field .input-email {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.get-started-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: }
