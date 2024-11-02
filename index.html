@@ -1,84 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-</head>
-
-<body>
-    <div id="root">
-        <div class="header">
-            <div class="header-container">
-                <div class="header-logo">
-                    <img src="assets/logo.png" />
-                </div>
-                <div class="header-lang combobox">
-                    <select class="select-tag">
-                        <option>English</option>
-                        <option>Hindi</option>
-                    </select>
-                </div>
-                <div class="header-signin">
-                    <button class="sign-in-btn" onclick="">
-                        Sign In
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="home" id="home">
-            <div class="home-container">
-                <div class="home-text-title">
-                    <p>Unlimited movies, TV shows and more</p>
-                    <p>Starts at $149. Cancel at any time.</p>
-                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                </div>
-                <div class="home-input-field">
-                    <input placeholder="Email address" class="input-email">
-                </div>
-                <div class="home-btn">
-                    <button class="btn get-started-btn" id="get-started-btn">
-                        Get Started >
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="trending-section">
-            <div class="trending-container">
-                <div class="section1">
-                    <h4>Trending Now</h4>
-                    <div class="trending-country combobox">
-                        <select class="select-tag select-country">
-                            <option>India</option>
-                            <option>Global</option>
-                        </select>
-                    </div>
-                    <div class="trending-movies combobox">
-                        <select class="select-tag select-video-type">
-                            <option>Movies</option>
-                            <option>Tv Shows</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="section2">
-                    <div class="trending-banner-images banner-img-container">
-                        <img class="banner-imgs" id="1" src="assets/netflix-bg.jpg">
-                        <img class="banner-imgs" id="2" src="assets/netflix-bg.jpg">
-                        <img class="banner-imgs" id="3" src="assets/netflix-bg.jpg">
-                        <img class="banner-imgs" id="4" src="assets/netflix-bg.jpg">
-                        <img  class="banner-imgs" id="5" src="assets/netflix-bg.jpg">
-                        <img class="banner-imgs" id="6" src="assets/netflix-bg.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<style src="/css/style.css"></style>
-
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,73 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div id="root">
-        <div class="header">
-            <div class="header-container">
-                <div class="header-logo">
-                    <img src="assets/logo.png" alt="Netflix Logo" />
-                </div>
-                <div class="header-lang combobox">
-                    <select class="select-tag">
-                        <option>English</option>
-                        <option>Hindi</option>
-                    </select>
-                </div>
-                <div class="header-signin">
-                    <button class="sign-in-btn">
-                        Sign In
-                    </button>
-                </div>
+    <div class="header">
+        <nav>
+            <img src="/images/logo.png" alt="Netflix Logo" class="logo">
+            <div class="header-options">
+                <button class="language-btn">English<img src="images/down-icon.png"></button>
+                <button class="signup-btn">Sign Up</button>
             </div>
+        </nav>
+        <div class="header-content">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <h3>Starts at ₹149. Cancel at any time.
+            </h3>
+            <p>
+                Ready to watch? Enter your email to create or restart your membership.
+            </p>
+            <form class="email-signup">
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Get Started</button>
+            </form>
         </div>
-        <div class="home" id="home">
-            <div class="home-container">
-                <div class="home-text-title">
-                    <p>Unlimited movies, TV shows and more</p>
-                    <p>Starts at $149. Cancel at any time.</p>
-                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                </div>
-                <div class="home-input-field">
-                    <input placeholder="Email address" class="input-email" type="email">
-                </div>
-                <div class="home-btn">
-                    <button class="btn get-started-btn">
-                        Get Started >
-                    </button>
-                </div>
+    </div>
+    <div class="features">
+        <div class="row">
+            <div class="text-col">
+                <h2>Enjoy on your TV.</h2>
+                <p>watch on smart TVs, PlayStation, Xbox, Chromecast, Apple Tv, Blu-ray players and more.</p>
             </div>
-        </div>
-        <div class="trending-section">
-            <div class="trending-container">
-                <div class="section1">
-                    <h4>Trending Now</h4>
-                    <div class="trending-country combobox">
-                        <select class="select-tag select-country">
-                            <option>India</option>
-                            <option>Global</option>
-                        </select>
-                    </div>
-                    <div class="trending-movies combobox">
-                        <select class="select-tag select-video-type">
-                            <option>Movies</option>
-                            <option>TV Shows</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="section2">
-                    <div class="trending-banner-images banner-img-container">
-                        <img class="banner-imgs" id="1" src="assets/netflix-bg.jpg" alt="Trending Movie 1">
-                        <img class="banner-imgs" id="2" src="assets/netflix-bg.jpg" alt="Trending Movie 2">
-                        <img class="banner-imgs" id="3" src="assets/netflix-bg.jpg" alt="Trending Movie 3">
-                        <img class="banner-imgs" id="4" src="assets/netflix-bg.jpg" alt="Trending Movie 4">
-                        <img class="banner-imgs" id="5" src="assets/netflix-bg.jpg" alt="Trending Movie 5">
-                        <img class="banner-imgs" id="6" src="assets/netflix-bg.jpg" alt="Trending Movie 6">
-                    </div>
-                </div>
+            <div class="img-col">
+                <img src="images/feature-1.png">
             </div>
         </div>
     </div>

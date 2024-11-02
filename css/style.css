@@ -1,55 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #141414;
-    color: white;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414; /* Netflix dark background */
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Header Styling */
 .header {
-    background-color: #141414;
-    padding: 10px 20px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/header-image.png);
+    background-size:cover;
+    background-position:center;
+    padding: 10px 8%;
+    position:relative;
+}
+nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
-
-.header-logo img {
-    height: 40px;
-}
-
-.header-lang {
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.header-signin .sign-in-btn {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+ .logo {
+    width: 150px;
     cursor: pointer;
-    border-radius: 5px;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background:#db0001;
+    color:#111;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left:10px;
+    cursor: pointer;
+}
+.language-btn{
+    color: #fff       ;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
 }
 
-.home {
+.language-btn img{
+   width: 10px;
+   margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
-    padding: 50px;
-    background-color: #f3f3f3;
-    color: #141414;
+    margin-top: 100px;
 }
-
-.home-input-field .input-email {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
 }
-
-.get-started-btn {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{
+    background:#fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    padding: 15px 30px;
+}
+/* features */
+.features{
+    padding: 50px 12%;
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis:50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
 }
