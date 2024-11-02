@@ -123,3 +123,8 @@ nav button{
     width: 90%;
     margin: auto;
 }
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
