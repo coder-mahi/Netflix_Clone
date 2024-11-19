@@ -4,24 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-In</title>
-    <style src="/css/style.css"></style>
+    <style>
+        /* signin page */
+        *{
+            color: white;
+        }
+        body{
+            background-image: url(/images/header-image.png);
+        }
+.signin-container{
+    display: flex;
+    justify-content: center;
+}
+.signin-form{
+    background-color: rgba(0, 0, 0, 0.673);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.signin-form input{
+    border: 1px solid whitesmoke;
+    background-color: transparent;
+    height: 40px;
+    font-size: 15px;
+}
+.signin-form h1,h2,h3,h4,h5,h6{
+    color: rgb(255, 255, 255);
+}
+.signin-submit-btn{
+    background-color: red;
+    height: 40px;
+    font-size: 15px;
+}
+.signin-code-btn{
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.296);
+    height: 40px;
+    font-size: 15px;
+}
+label{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.remember-me{
+    height: 20px;
+    display: flex;
+}
+    </style>
 </head>
 <body>
     <nav>
         <img src="images/logo.png" alt="Netflix Logo" class="logo">
-        <div class="header-options">
-            <button class="language-btn">English<img src="images/down-icon.png"></button>
-            <a href="/signin.html"><button class="signup-btn">Sign In
-            </button>
-        </a>
-        </div>
     </nav>
-    <div class="signin-page">
+    <div class="signin-container">
         <form class="signin-form">
-                <label for="mail" name="mail">Email Address</label>
-                <input type="text" class="email">
-                <label for="password" name="password">Password</label>
-                <input type="password" class="password">
+            <h1>Sign In</h1>
+                <input type="text" class="email" placeholder="Email or mobile number">
+                <input type="password" class="password" placeholder="Password">
+                <button class="signin-submit-btn">Sign In</button>
+                <label>OR</label>
+                <button class="signin-code-btn">Use a sign-in code</button>
+                <label class="forget-pass">Forget password?</label>
+                <div class="remember-me">
+                    <input type="checkbox" title="Remember Me">
+                    <label for="checkbox">Remember Me</label>
+                </div>
+                New to Netflix? Sign up now.
         </form>
     </div>
 </body>
