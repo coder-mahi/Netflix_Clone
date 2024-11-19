@@ -5,55 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-In</title>
     <style>
-        /* signin page */
-        *{
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
             color: white;
         }
-        body{
-            background-image: url(/images/header-image.png);
+        body {
+            background-image: url('/images/header-image.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-.signin-container{
-    display: flex;
-    justify-content: center;
-}
-.signin-form{
-    background-color: rgba(0, 0, 0, 0.673);
-    border: 1px solid rgb(255, 255, 255);
-    padding: 30px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-.signin-form input{
-    border: 1px solid whitesmoke;
-    background-color: transparent;
-    height: 40px;
-    font-size: 15px;
-}
-.signin-form h1,h2,h3,h4,h5,h6{
-    color: rgb(255, 255, 255);
-}
-.signin-submit-btn{
-    background-color: red;
-    height: 40px;
-    font-size: 15px;
-}
-.signin-code-btn{
-    background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.296);
-    height: 40px;
-    font-size: 15px;
-}
-label{
-    display: flex;
-    justify-content: center;
-    color: white;
-}
-.remember-me{
-    height: 20px;
-    display: flex;
-}
+
+        nav {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .signin-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signin-form {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .signin-form h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .signin-form input {
+            border: 1px solid #ccc;
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .signin-form button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signin-submit-btn {
+            background-color: #e50914;
+            color: white;
+        }
+
+        .signin-submit-btn:hover {
+            background-color: #bf0810;
+        }
+
+        .signin-code-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .signin-code-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .extra-links {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .extra-links a {
+            color: #e50914;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -63,17 +122,21 @@ label{
     <div class="signin-container">
         <form class="signin-form">
             <h1>Sign In</h1>
-                <input type="text" class="email" placeholder="Email or mobile number">
-                <input type="password" class="password" placeholder="Password">
-                <button class="signin-submit-btn">Sign In</button>
-                <label>OR</label>
-                <button class="signin-code-btn">Use a sign-in code</button>
-                <label class="forget-pass">Forget password?</label>
-                <div class="remember-me">
-                    <input type="checkbox" title="Remember Me">
-                    <label for="checkbox">Remember Me</label>
-                </div>
-                New to Netflix? Sign up now.
+            <input type="email" placeholder="Email or mobile number" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="signin-submit-btn">Sign In</button>
+            <p style="text-align:center;">OR</p>
+            <button type="button" class="signin-code-btn">Use a sign-in code</button>
+            <p class="extra-links">
+                <a href="#">Forgot password?</a>
+            </p>
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" title="Remember Me">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <p class="extra-links">
+                New to Netflix? <a href="#">Sign up now</a>.
+            </p>
         </form>
     </div>
 </body>
