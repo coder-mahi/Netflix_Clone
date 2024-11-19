@@ -285,3 +285,15 @@ input[type="radio"]{
         font-size: 32px;
     }
 }
+
+
+
+/* signin page */
+.signin-page{
+    width: 300px;
+}
+.signin-form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
