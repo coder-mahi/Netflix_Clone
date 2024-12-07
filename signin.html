@@ -14,8 +14,7 @@
             color: white;
         }
         body {
-            background-image: url('/images/header-image.png');
-            background-size: cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/header-image.png);            background-size: cover;
             background-position: center;
             height: 100vh;
             display: flex;
@@ -114,6 +113,7 @@
             text-decoration: underline;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <nav>
@@ -122,11 +122,11 @@
     <div class="signin-container">
         <form class="signin-form">
             <h1>Sign In</h1>
-            <input type="email" placeholder="Email or mobile number" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit" class="signin-submit-btn">Sign In</button>
+            <input type="email" id="email-input" placeholder="Email or mobile number" required>
+            <input type="password" id="pwd-input" placeholder="Password" required>
+            <button type="submit" id="sign-in-btn" class="signin-submit-btn" onclick="signin">Sign In</button>
             <p style="text-align:center;">OR</p>
-            <button type="button" class="signin-code-btn">Use a sign-in code</button>
+            <button type="button" class="signin-code-btn" onclick="signin">Use a sign-in code</button>
             <p class="extra-links">
                 <a href="#">Forgot password?</a>
             </p>
